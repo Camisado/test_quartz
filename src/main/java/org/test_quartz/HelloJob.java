@@ -12,5 +12,6 @@ public class HelloJob implements Job {
     @Override
     public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
         System.out.println("Hello from first Job!");
+        throw new JobExecutionException("Test exception");
     }
 }
